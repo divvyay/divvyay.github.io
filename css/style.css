@@ -1,131 +1,195 @@
-/***** NAVBAR *****/
+/* ────────────────────────────── */
+/* FONT IMPORT */
+/* ────────────────────────────── */
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap");
 
+
+/* ────────────────────────────── */
+/* NAVBAR  (same on every page) */
+/* ────────────────────────────── */
 .navbar {
-    background-color: #ffffff;
-    border-radius: 0;
+    background-color: transparent;
+    border: none;
+    margin: 40px 0 60px 0; /* DO NOT CHANGE PER PAGE */
 }
 
-/* Navbar title */
-.navbar-default .navbar-brand {
-    color: #388a2a;
-    font-size: px;
-        font-family: "Homemade Apple", cursive;
-        font-weight: 400;
-        font-style: normal;
-      
-}
-
-/* Navbar hover effects */
-.navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus,
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
-    color: #1d1285;
+.navbar-brand {
+    font-family: "Instrument Serif", serif;
+    font-size: 28px;
+    font-style: italic;
+    color: black;
     text-decoration: none;
 }
 
-/* Navbar links */
-.navbar-default .navbar-nav > li > a {
-    color: #000000;
-    font-family: "Outfit", sans-serif;
-    font-size: 16px;
-    padding: 10px;
-}
-
-/* Navbar collapsed styles */
-.navbar-toggler {
-    color: #000000;
-    border-color: #fff;
-    background-color: #ffffff;
-    border-radius: 4px;
-    border: 1px solid;
-    fill: #fff;
-    font-size: 16px;
-    position: relative;
-    margin-right: 10px;
-}
-
-.navbar-toggler:hover,
-.navbar-toggler:focus {
-    background-color: #ffffff;
-    color: #1d1285;
-    fill: #242424;
-    border-color: #fff;
-
-}
-
-/*** JUMBOTRON ***/
-
-.jumbotron {
-    text-align: center;
-    color: #ffffff;
-    padding: 3%;
-    border-radius: 0px;
-}
-
-.jumbotron h2 {
-    color: #388a2a;
-    font-size: px;
-        font-family: "Homemade Apple", cursive;
-        font-weight: 400;
-        font-style: normal;;
-}
-
-.img-responsive{
-    width:100%;
-}
-
-/*** CARD ***/
-
-.card {
-    background-color: #fff;
-    border-color: #cccccc;
-    border-width: 1px;
-    width: 100%;
-}
-
-.card:hover {
-    border-color: #ffffff;
-}
-
-/*** Basic Text Styles ***/
-
-#about-world {
-    max-height: 200px;
-}
-
-.resume h3 {
-    font-weight: bold;
+.nav-link {
+    text-decoration: none;
+    color: black;
 }
 
 
-hr {
-    border-color: white;
-    border-width: 2px;
+/* ────────────────────────────── */
+/* MAIN SECTION (default spacing) */
+/* ────────────────────────────── */
+main {
+    margin-bottom: 140px;
 }
 
+
+/* ────────────────────────────── */
+/* TYPOGRAPHY */
+/* ────────────────────────────── */
+body,
 p {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 17px;
+    color: black;
+}
+
+h1 {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 40px;
+    font-weight: normal;
+    color: black;
+}
+
+h2 {
+    font-family: "Instrument Serif", serif;
+    font-size: 50px;
+    font-style: italic;
+    color: black;
+}
+
+h3 {
+    font-family: "Helvetica Neue", Arial, sans-serif;
     font-size: 20px;
-    color: #000000;
-    font-family: "Outfit", sans-serif;
+    font-weight: normal;
+    color: black;
 }
 
-a {
-    font-size: 20px;
-    color: #000000
+h4 {
+    font-family: "Instrument Serif", serif;
+    font-size: 28px;
+    font-style: italic;
+    color: black;
 }
 
-a:hover {
-    color: #1d1285;
+
+/* ────────────────────────────── */
+/* FOOTER (always the same) */
+/* ────────────────────────────── */
+footer {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    font-size: 28px;
+    margin-bottom: 40px;
 }
 
-.container{
-    padding:25px 0;
+
+/* ────────────────────────────── */
+/* LINK HOVER */
+/* ────────────────────────────── */
+a:hover,
+.nav-link:hover,
+.navbar-brand:hover {
+    color: #b8ce8e !important;
+    text-decoration: none;
 }
 
-body {
 
-    font-family: "Outfit", sans-serif;
-    background-color: #ffffff;
-    color: #000000;
+/* ────────────────────────────── */
+/* ANIMATIONS */
+/* ────────────────────────────── */
+.blink-green {
+    animation: greenBlink 2s ease-in-out infinite;
+}
+
+@keyframes greenBlink {
+    0%, 100% { color: rgb(80, 138, 69); }
+    50% { color: #97c85e; }
+}
+
+.blink-greenblue {
+    animation: greenblueBlink 2s ease-in-out infinite;
+}
+
+@keyframes greenblueBlink {
+    0% { color: rgb(88, 202, 102); }
+    20% { color: rgb(116, 205, 91); }
+    30% { color: rgb(70, 160, 28); }
+    60% { color: rgb(48, 171, 182); }
+    80% { color: rgb(31, 49, 119); }
+    90% { color: rgb(31, 106, 119); }
+    100% { color: rgb(88, 202, 102); }
+}
+
+/* BUTTON — animated background (uses your existing keyframes) */
+.resume-btn {
+    padding: 12px 25px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 17px;
+    /* font-weight: bold; */
+    font-style:italic;
+    cursor:grab;
+    text-decoration: underline;
+}
+
+
+
+/* keep hover consistent with your other links */
+.resume-btn:hover {
+    color: black;
+    transform:scale(1.2);
+}
+
+
+/* ────────────────────────────── */
+/* PAGE-SPECIFIC SPACING (content only) */
+/* ────────────────────────────── */
+
+/* INDEX — more whitespace */
+#home-main {
+    margin-top: 120px;
+    margin-bottom: 200px;
+}
+
+/* ABOUT — image smaller + text moved up */
+.about-main img {
+    max-width: 70%;
+}
+
+.about-main p {
+    margin-bottom: 6px;
+}
+
+.about-main h2 {
+    margin-top: 0;
+}
+
+/* ───────── PROJECT CARDS ───────── */
+.project-card {
+    border: none;
+    background: transparent;
+}
+
+.project-img {
+    border-radius: 12px;
+}
+
+/* button */
+.project-btn {
+    display: inline-block;
+    padding: 8px 18px;
+    margin-top: 6px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 20px;      /* h3 size */
+    color: black;
+    background: white;
+    border: none;
+    cursor: pointer;
+}
+
+.project-btn:hover {
+    transform: scale(1.05);
+    text-decoration: underline;
 }
